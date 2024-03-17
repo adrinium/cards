@@ -1,24 +1,9 @@
-<div class="container">
-  <div class="row mt-2">
-    <app-card></app-card>
-    <app-card></app-card>
-    <div class="card m-2 p-0" style="width: 18rem;">
-      <img src="../assets/images/mountain.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Snowy mountain</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary">#hikingperson</h6>
-        <p class="card-text">Beautiful view of some mountains I saw during my hike.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card m-2 p-0" style="width: 18rem;">
-      <img src="../assets/images/biking.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Mountain biking</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary">#hiking666</h6>
-        <p class="card-text">Action shot of me riding my bike.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
+<div class="card-group">
+  <app-card
+    *ngFor="let card of cards"
+    [title]="card.title"
+    [tag]="card.tag"
+    [description]="card.description"
+    [imageUrl]="card.imageUrl"
+  ></app-card>
 </div>
